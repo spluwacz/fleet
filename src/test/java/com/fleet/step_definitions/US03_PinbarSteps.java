@@ -15,8 +15,8 @@ public class US03_PinbarSteps {
 
     @When("the user should see and click {string} link")
     public void the_user_should_see_and_click_link(String string) {
-        BrowserUtils.sleep(3);
-        //loginPage.waitUntilLoaderScreenDisappear();
+
+        loginPage.waitUntilLoaderScreenDisappear();
         Actions actions = new Actions(Driver.getDriver());
         actions.moveToElement(loginPage.pinBar).perform();
         actions.click().perform();
