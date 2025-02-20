@@ -29,9 +29,3 @@ Feature: Users should be able to login
       | driver        |
       | sales manager |
       | store manager |
-
-
-
-
-
-
