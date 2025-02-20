@@ -38,7 +38,7 @@ public abstract class BasePage {
     @FindBy(linkText = "My User")
     public WebElement myUser;
 
-    @FindBy(xpath = "//a[normalize-space()='Learn how to use this space']")
+    @FindBy(linkText = "Learn how to use this space")
     public WebElement pinBar;
 
 
