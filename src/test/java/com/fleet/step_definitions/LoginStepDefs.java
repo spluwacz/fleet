@@ -10,6 +10,7 @@ import org.junit.Assert;
 
 public class LoginStepDefs {
 
+
     @Given("the user is on the login page")
     public void the_user_is_on_the_login_page() {
         System.out.println("Login to app in Before method");
@@ -41,14 +42,13 @@ public class LoginStepDefs {
         loginPage.login(username, password);
     }
 
-
     @Then("the user should see {string} in the title")
     public void theUserShouldSeeInTheTitle(String arg0) {
-       BrowserUtils.sleep(3);
-       String actualTitle = Driver.getDriver().getTitle();
-       String expectedTitle = arg0;
+        BrowserUtils.sleep(3);
+        String actualTitle = Driver.getDriver().getTitle();
+        String expectedTitle = arg0;
 
-       Assert.assertEquals(actualTitle,expectedTitle);
+        Assert.assertEquals(actualTitle, expectedTitle);
 
     }
 
@@ -74,7 +74,6 @@ public class LoginStepDefs {
 
 
 
+
     }
 }
-
-
