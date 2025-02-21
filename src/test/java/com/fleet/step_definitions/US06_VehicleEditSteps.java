@@ -18,26 +18,27 @@ public class US06_VehicleEditSteps {
 
     @Given("user navigates and clicks to Vehicles under the Fleet dropdown")
     public void user_navigates_to_vehicles_under_the_fleet_dropdown() {
-
         loginPage.waitUntilLoaderScreenDisappear();
-        Actions actions = new Actions(Driver.getDriver());
-        actions.moveToElement(loginPage.fleetDropdown).perform();
-        BrowserUtils.sleep(2);
-        actions.moveToElement(loginPage.vehicles).perform();
-        actions.click().perform();
-
+        loginPage.navigateToModule("Fleet","Vehicles");
     }
 
     @When("user hovers over the three-dot menu")
     public void user_hovers_over_the_three_dot_menu() {
         Actions actions = new Actions(Driver.getDriver());
+        BrowserUtils.sleep(3);
         actions.moveToElement(vehicleEditPage.threeDotMenu).perform();
-        BrowserUtils.sleep(5);
-
+        BrowserUtils.sleep(1);
     }
 
     @Then("user sees View , Edit , and Delete options")
     public void user_sees_view_edit_and_delete_options() {
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(vehicleEditPage.viewMenuItem).perform();
+        BrowserUtils.sleep(2);
+        actions.moveToElement(vehicleEditPage.editMenuItem).perform();
+        BrowserUtils.sleep(2);
+        actions.moveToElement(vehicleEditPage.deleteMenuItem).perform();
+        BrowserUtils.sleep(2);
     }
 
 }
