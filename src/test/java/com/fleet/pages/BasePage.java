@@ -41,6 +41,14 @@ public abstract class BasePage {
     @FindBy(linkText = "Learn how to use this space")
     public WebElement pinBar;
 
+    @FindBy (linkText = "Fleet")
+    public WebElement fleetDropdown;
+
+    @FindBy(linkText = "Vehicles")
+    public WebElement vehicles;
+
+
+
 
 
 
