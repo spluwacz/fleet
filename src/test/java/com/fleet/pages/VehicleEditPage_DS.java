@@ -11,16 +11,31 @@ public class VehicleEditPage_DS {
 
     public VehicleEditPage_DS() {
         PageFactory.initElements(Driver.getDriver(),this);
-
     }
 
-    @FindBy(linkText = "...")
+    @FindBy(xpath = "(//a[.='...'])[1]")
     public WebElement threeDotMenu;
+
+    @FindBy (xpath = "(//a[@title='View'])[1]")
+    public WebElement viewMenuItem;
+
+    @FindBy (xpath = "(//a[@title='Edit'])[1]")
+    public WebElement editMenuItem;
+
+    @FindBy (xpath = "(//i[@class='fa-trash-o hide-text'])[1]")
+    public WebElement deleteMenuItem;
+
+
+
+
+
 
 
 
 
     /*
+
+    LOCATORS BELOW HAVE BEEN MOVED TO BASEPAGE
 
       @FindBy (linkText = "Fleet")
     public WebElement fleetDropdown;
