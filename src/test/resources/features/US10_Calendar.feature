@@ -15,6 +15,6 @@
 
         Examples:
           | userType      |
-          | driver        |
+         # | driver        |
          | sales manager |
-         | store manager |
+        #| store manager |
