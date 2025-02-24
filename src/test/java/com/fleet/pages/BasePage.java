@@ -41,6 +41,23 @@ public abstract class BasePage {
     @FindBy(linkText = "Learn how to use this space")
     public WebElement pinBar;
 
+    @FindBy (linkText = "Fleet")
+    public WebElement fleetDropdown;
+
+    @FindBy(linkText = "Vehicles")
+    public WebElement vehicles;
+
+    @FindBy(linkText ="Vehicles Model" )
+    public WebElement vehiclesModel;
+
+    @FindBy(xpath="(//div[@class='message'])[2]")
+    public WebElement youDoNotHavePermission;
+
+    @FindBy(xpath="//table/thead/tr[@style='margin-left: 0px;']//th/a")
+    public List<WebElement> headerRow;
+
+
+
 
 
 
