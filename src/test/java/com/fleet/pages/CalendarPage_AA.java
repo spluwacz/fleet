@@ -24,5 +24,24 @@ public class CalendarPage_AA {
     @FindBy(xpath = "//span[normalize-space()='Calendar Events']")
     public WebElement calendarEvent;
 
+
+    @FindBy(css = "a[title='Create Calendar event']")
+    public WebElement createCalendarEventBtn;
+
+    @FindBy(css = "input[data-name='recurrence-repeat']")
+    public WebElement repeatCheckbox;
+
+    @FindBy(css = "input[data-related-field='intervalCount']")
+    public WebElement repeatEveryInput;
+
+    @FindBy(css = ".validation-failed")
+    public WebElement errorMessage;
+
+
+
+
+
+
+
 }
 
