@@ -47,14 +47,16 @@ public abstract class BasePage {
     @FindBy(linkText = "Vehicles")
     public WebElement vehicles;
 
-    @FindBy(linkText ="Vehicles Model" )
-    public WebElement vehiclesModel;
+    @FindBy(xpath= "(//div[@class='message'])[2]")
+    public WebElement permissionError;
 
-    @FindBy(xpath="(//div[@class='message'])[2]")
-    public WebElement youDoNotHavePermission;
+    @FindBy(xpath = "//input[@value='1']")
+    public WebElement defaultPage;
 
-    @FindBy(xpath="//table/thead/tr[@style='margin-left: 0px;']//th/a")
-    public List<WebElement> headerRow;
+    @FindBy(xpath = "(//div[@class='btn-group'])[3]")
+    public WebElement ViewPerPage;
+
+
 
 
 
