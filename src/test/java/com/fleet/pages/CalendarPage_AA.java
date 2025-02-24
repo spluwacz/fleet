@@ -24,5 +24,11 @@ public class CalendarPage_AA {
     @FindBy(xpath = "//span[normalize-space()='Calendar Events']")
     public WebElement calendarEvent;
 
+  //  @FindBy(name = "recurrence-repeat")
+ //   public WebElement repeat;
+
+    @FindBy(id = "tinymce")
+  public  WebElement frame1;
+
 }
 
