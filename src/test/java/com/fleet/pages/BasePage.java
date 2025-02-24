@@ -56,7 +56,14 @@ public abstract class BasePage {
     @FindBy(xpath = "(//div[@class='btn-group'])[3]")
     public WebElement ViewPerPage;
 
+    @FindBy(linkText ="Vehicles Model" )
+    public WebElement vehiclesModel;
 
+    @FindBy(xpath="(//div[@class='message'])[2]")
+    public WebElement youDoNotHavePermission;
+
+    @FindBy(xpath="//table/thead/tr[@style='margin-left: 0px;']//th/a")
+    public List<WebElement> headerRow;
 
 
 
