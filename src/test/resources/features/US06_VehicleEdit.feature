@@ -6,9 +6,9 @@ Feature: User should be able to see edit icons on the Vehicles page
     Given the user is on the login page
 
 
-  Scenario Outline: Verify user can see edit functions on the vehicle page when hovering over three-dot menu
+  Scenario Outline: Verify user can see edit functions on the vehicle page
     Given the user logged in as "<userType>"
-    When user navigates and clicks to Vehicles under the Fleet dropdown
+    When user navigates to Vehicles under the Fleet dropdown
     And user hovers over the three-dot menu
     Then user sees View , Edit , and Delete options
     Examples:
