@@ -10,11 +10,4 @@ Feature: User should be filter customers info on the Accounts page
     Then user should see below list
 
 
-      | ACCOUNT NAME  |
-      | CONTACT NAME  |
-      | CONTACT EMAIL |
-      | CONTACT PHONE |
-      | OWNER         |
-      | BUSINESS UNIT |
-      | CREATED AT    |
-      | UPDATE AT     |
+  |ACCOUNT NAME, CONTACT NAME, CONTACT EMAIL, CONTACT PHONE, OWNER, BUSINESS UNIT, CREATED AT, UPDATED AT|
