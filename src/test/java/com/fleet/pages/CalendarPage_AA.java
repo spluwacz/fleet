@@ -28,10 +28,10 @@ public class CalendarPage_AA {
     @FindBy(css = "a[title='Create Calendar event']")
     public WebElement createCalendarEventBtn;
 
-    @FindBy(css = "input[data-name='recurrence-repeat']")
+    @FindBy(xpath = "(//input[@type='checkbox'])[2]")
     public WebElement repeatCheckbox;
 
-    @FindBy(css = "input[data-related-field='intervalCount']")
+    @FindBy(xpath = "(//input[@class='recurrence-subview-control__number'])[2]")
     public WebElement repeatEveryInput;
 
     @FindBy(css = ".validation-failed")
