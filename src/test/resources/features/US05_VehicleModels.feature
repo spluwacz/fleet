@@ -1,8 +1,8 @@
-
+@driver_bsr
 Feature:Users should be able to login
   User story: As a user, I should be able to login with correct credentials to different accounts. And 10 columns should be displayed.
   Accounts are: driver, sales manager, store manager
-  @driver_bsr
+
   Scenario Outline:Fleet Management Search Functionality
     Given user is on the login page
     When user enters the username "<username>" and password "<password>"
