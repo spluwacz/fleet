@@ -8,8 +8,10 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.devtools.v131.fedcm.model.Account;
 import org.openqa.selenium.interactions.Actions;
 
+import java.time.Duration;
 import java.util.List;
 
 public class US12_AccountsStep {
@@ -23,12 +25,23 @@ public class US12_AccountsStep {
     public void userNavigateToAccountsUnderCustomersDropdown() {
         loginPage.waitUntilLoaderScreenDisappear();
         loginPage.navigateToModule("Customers", "Accounts");
-        BrowserUtils.sleep(5);
+
     }
 
 
     @Then("user should see below list")
-    public void user_should_see_below_list(List<String> expectedDropdownList) {
+    public void user_should_see_below_list(List<String> expectedList) {
+
+       BrowserUtils.sleep(3);
+        List<String> actualList = BrowserUtils.getElementsText(accountsPage.userSeeInHeader);
+        Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+        Assert.assertNotEquals(expectedList, actualList);
+
+
+
+
+
 
     }
 
