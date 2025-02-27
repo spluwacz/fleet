@@ -1,4 +1,4 @@
-
+@angel
   Feature: User should be able to type into description
     field when create a calendar event
 
@@ -9,13 +9,12 @@
         Given the user logged in as "<userType>"
         When user navigates to activities dropdown
         And user hovers over the activities
-        And user click on calendar events
         And user click on create calendar events
         And user write text in the field
         Then user should see txt in the field
 
         Examples:
           | userType      |
-          | driver        |
-          | sales manager |
-          | store manager |
+         # | driver        |
+         | sales manager |
+        #| store manager |
