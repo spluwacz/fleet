@@ -31,11 +31,14 @@ public class CalendarPage_AA {
     @FindBy(xpath = "(//input[@type='checkbox'])[2]")
     public WebElement repeatCheckbox;
 
-    @FindBy(xpath = "(//input[@class='recurrence-subview-control__number'])[2]")
+    @FindBy(xpath = "(//input[@value='1'])[2]")
     public WebElement repeatEveryInput;
 
-    @FindBy(css = ".validation-failed")
+    //@FindBy(css = ".validation-failed")
+    @FindBy(xpath = "(//span['This value should not be blank.'])[91]")
     public WebElement errorMessage;
+
+
 
 
 
