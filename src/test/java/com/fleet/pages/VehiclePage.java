@@ -1,19 +1,17 @@
 package com.fleet.pages;
 
 import com.fleet.utilities.Driver;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
-import java.util.Random;
 
-public class US07_VehiclePage {
+public class VehiclePage {
 
-    public US07_VehiclePage() {
+    public VehiclePage() {
 
-        PageFactory.initElements(Driver.getDriver(),US07_VehiclePage.this);
+        PageFactory.initElements(Driver.getDriver(), VehiclePage.this);
 
 
     }
@@ -24,7 +22,13 @@ public class US07_VehiclePage {
     public List<WebElement> column1checkboxes;
 
 
-    }
+
+
+
+
+}
+
+
 
 
 

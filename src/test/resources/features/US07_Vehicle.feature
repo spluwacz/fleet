@@ -21,6 +21,14 @@ Feature: As a user (Sales and Store manager), I should be able to select any veh
       | store manager |
 
 
+
+
+
+
+
+
+
+
 #   What is a better scenario option ask team
 
   #Scenario: Verify that once the store manager launch on the Vehicles page, the users can see all the checkboxes
