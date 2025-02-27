@@ -12,6 +12,9 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class US10_CalendarStepDefinition {
     LoginPage loginPage = new LoginPage();
@@ -22,9 +25,9 @@ public class US10_CalendarStepDefinition {
 
         Actions actions = new Actions(Driver.getDriver());
         actions.moveToElement(calendarPage_aa.activitiesDrop).perform();
-        BrowserUtils.sleep(3);
+        Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         actions.click().perform();
-        BrowserUtils.sleep(3);
+        Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 
 
     }
@@ -38,9 +41,10 @@ public class US10_CalendarStepDefinition {
 
     @When("user click on create calendar events")
     public void user_click_on_create_calendar_events() {
-        BrowserUtils.sleep(3);
+
+        BrowserUtils.sleep(4);
         calendarPage_aa.createEvent.click();
-      //  calendarPage_aa.repeat.click();
+
 
 
     }
@@ -48,15 +52,18 @@ public class US10_CalendarStepDefinition {
     @When("user write text in the field")
     public void user_write_text_in_the_field() {
 
-       BrowserUtils.sleep(8);
+        Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         //Find the elemnt= Driver.getDriver().switchTo().frame("//iframe[@allowtransparency='true']");
-        WebElement iframe=Driver.getDriver().findElement(By.xpath("//iframe[@allowtransparency='true']"));
+        WebElement iframe = Driver.getDriver().findElement(By.xpath("//iframe[@allowtransparency='true']"));
         Driver.getDriver().switchTo().frame(iframe);
-     // WebElement iframe=Driver.getDriver().findElement(By.xpath("//iframe[@allowtransparency='true']"));
-       // Driver.getDriver().switchTo().frame("//iframe[@allowtransparency='true']");
-        BrowserUtils.sleep(10);
-        WebElement inputFiled=Driver.getDriver().findElement(By.id("tinymce"));
-        BrowserUtils.sleep(10);
+        // WebElement iframe=Driver.getDriver().findElement(By.xpath("//iframe[@allowtransparency='true']"));
+        // Driver.getDriver().switchTo().frame("//iframe[@allowtransparency='true']");
+        Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        // BrowserUtils.sleep(7);
+
+        WebElement inputFiled = Driver.getDriver().findElement(By.id("tinymce"));
+        Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        // BrowserUtils.sleep(7);
         inputFiled.sendKeys("Our Team is THE BEST!");
 
 
@@ -64,10 +71,9 @@ public class US10_CalendarStepDefinition {
 
     @Then("user should see txt in the field")
     public void user_should_see_txt_in_the_field() {
-        String enteredText="Our Team is THE BEST!";
-        String expectedText="Our Team is THE BEST!";
-        Assert.assertEquals(enteredText,expectedText);
-
+        String actualText = "Our Team is THE BEST!";
+        String expectedText = "Our Team is THE BEST!";
+        Assert.assertEquals(actualText, expectedText);
 
     }
 
