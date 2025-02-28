@@ -1,4 +1,4 @@
-@accounts
+@accounts @smoke
 Feature: User should be filter customers info on the Accounts page
 
   Background: User is already in the log in page

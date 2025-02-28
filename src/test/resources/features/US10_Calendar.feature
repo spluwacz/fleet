@@ -1,4 +1,4 @@
-@angel
+@angel @smoke
 Feature: User should be able to type into description
   field when create a calendar event
 

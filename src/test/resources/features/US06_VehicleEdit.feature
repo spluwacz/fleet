@@ -1,4 +1,4 @@
-@vehicle_edit
+@vehicle_edit @smoke
 Feature: User should be able to see edit icons on the Vehicles page
   while hovering over the three-dot menu
 

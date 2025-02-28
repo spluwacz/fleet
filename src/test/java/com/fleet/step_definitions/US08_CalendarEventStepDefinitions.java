@@ -79,6 +79,7 @@ public class US08_CalendarEventStepDefinitions {
 
     @Then("user should see {string} warning")
     public void userShouldSeeWarning(String string) {
+        BrowserUtils.sleep(2);
         String expectedWarning = "This value should not be blank.";
         String actualWarning = calendarPage_aa.errorMessage2.getText();
         System.out.println("actualValue = " + actualWarning);
