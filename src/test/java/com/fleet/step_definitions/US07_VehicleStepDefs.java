@@ -44,6 +44,7 @@ public class US07_VehicleStepDefs {
 
     @Then("user should be able to select a random car")
     public void user_should_be_able_to_select_a_random_car() {
+
        //this is a way to pick the user choice of a random checkbox + take the //away to activate remember to //the other option
 
        // Collections.shuffle(vehiclePage.column1checkboxes);
