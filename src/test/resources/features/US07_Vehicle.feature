@@ -1,4 +1,4 @@
-@VehicleAmie
+@VehicleAmie @smoke
 Feature: As a user (Sales and Store manager), I should be able to select any vehicle from the
   Vehicles page (web table).
 

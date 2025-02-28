@@ -1,4 +1,4 @@
-@vehicle_contracts_feature
+@vehicle_contracts_feature @smoke
 Feature: Users should be able to login
 
   Background: User is already in the log in page

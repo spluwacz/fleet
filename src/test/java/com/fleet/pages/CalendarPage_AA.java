@@ -38,12 +38,6 @@ public class CalendarPage_AA extends BasePage {
     @FindBy(xpath = "//span[contains(text(),'This value should not be blank.')]")
     public WebElement errorMessage2;
 
-
-
-
-
-
-
     @FindBy(id = "tinymce")
     public WebElement frame1;
 
