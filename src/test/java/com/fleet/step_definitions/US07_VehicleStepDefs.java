@@ -1,24 +1,21 @@
 package com.fleet.step_definitions;
 
 import com.fleet.pages.LoginPage;
-import com.fleet.pages.US07_VehiclePage;
-import io.cucumber.java.Status;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
+import com.fleet.pages.VehiclePage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
-import java.awt.*;
+import java.util.Random;
 
 
 public class US07_VehicleStepDefs {
 
     LoginPage loginPage = new LoginPage();
-    US07_VehiclePage vehiclePage = new US07_VehiclePage();
+    VehiclePage vehiclePage = new VehiclePage();
+
+
+
 
     @When("user navigates to Vehicles under Fleet dropdown")
     public void user_navigates_to_vehicles_under_fleet_dropdown() {
@@ -41,9 +38,33 @@ public class US07_VehicleStepDefs {
         Assert.assertTrue(vehiclePage.checkboxAll.isSelected());
         vehiclePage.checkboxAll.click();
     }
+
+
+
+
     @Then("user should be able to select a random car")
     public void user_should_be_able_to_select_a_random_car() {
 
+       //this is a way to pick the user choice of a random checkbox + take the //away to activate remember to //the other option
+
+       // Collections.shuffle(vehiclePage.column1checkboxes);
+       // vehiclePage.column1checkboxes.get(2).click();
+
+       // This is another way to pick a random checkbox where it picks a checkbox  for you
+        if (vehiclePage.column1checkboxes.isEmpty()) {
+            System.out.println("No elements found for the provided locator.");
+             return;
+        }
+
+        // Create a Random object to generate a random index
+        Random random = new Random();
+        // Generate a random index between 0 and the size of the list
+        int randomIndex = random.nextInt(vehiclePage.column1checkboxes.size());
+
+        // Return the randomly selected element
+         vehiclePage.column1checkboxes.get(randomIndex);
+        System.out.println("the random index is " + randomIndex);
+    }
+
 
     }
-}
