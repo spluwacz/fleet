@@ -35,7 +35,8 @@ public class CalendarPage_AA extends BasePage {
     @FindBy(xpath = "(//span['This value should not be blank.'])[91]")
     public WebElement errorMessage;
 
-
+    @FindBy(xpath = "//span[contains(text(),'This value should not be blank.')]")
+    public WebElement errorMessage2;
 
 
 
